@@ -1,6 +1,28 @@
-body{
-    background-image:url("/img/background.png");
+body {
+    background-image: url("/img/background.png");
 }
-nav{
-    
+
+.lader {
+    background-color: aliceblue;
+    display: flex;
+    width: 100%;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.menu__top {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu__top__buttons {}
+
+ul {
+    list-style: none;
 }
