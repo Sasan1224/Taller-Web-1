@@ -1,0 +1,13 @@
+@media all and (max-width: 1024px){
+    .about__container{
+        flex-wrap: wrap;
+    }
+    .about__colum{
+        width: 100%;
+    }
+}
+@media all and (max-width: 700px){
+.nav{
+    display: none;
+}
+}

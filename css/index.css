@@ -1,11 +1,13 @@
 body {
     background-image: url("/img/background.png");
+    margin: 0;
 }
 
 .lader {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     width: 100%;
+
 
 }
 
@@ -13,16 +15,77 @@ body {
     display: flex;
     justify-content: right;
     flex-direction: column;
+    width: 100%;
+
 }
 
 .menu__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 
-.menu__top__buttons {}
+.menu__top__ul {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    padding: 0;
+    justify-content: center;
+
+}
+
+.menu__top__buttons {
+    width: 100%;
+  
+
+}
+
+.menu__top__item {
+    padding: 0 20px;
+}
 
 ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 10px 60px;
+}
+
+.menu__bot {
+    width: 100%;
+
+}
+
+.menu__bot__item {
+
+    padding: 20px;
+}
+
+.menu__bot__ul {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+}
+
+input[type=text] {
+size: 90%;
+    background-image: url(/img/search.png);
+    border: none;
+    background-color: rgb(207, 151, 66, 0.22);
+    background-repeat: no-repeat;
+    padding-left: 0;
+    background-position: right;
+    padding: 20PX;
+}
+.search__bar{
+    padding: 20px 30px;
 }
