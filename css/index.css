@@ -1,18 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body {
     background-image: url("/img/background.png");
     margin: 0;
 }
 
+.flex{
+    display: flex;
+}
+
 .lader {
     background-color: rgb(255, 255, 255);
-    display: flex;
     width: 100%;
+    font-family: 'Saira', sans-serif;
 
 
 }
 
 .menu {
-    display: flex;
+
     justify-content: right;
     flex-direction: column;
     width: 100%;
@@ -20,14 +29,13 @@ body {
 }
 
 .menu__top {
-    display: flex;
+
     justify-content: space-evenly;
 
 }
 
 .menu__top__ul {
     width: 100%;
-    display: flex;
     justify-content: right;
     flex-direction: row;
     padding: 0;
@@ -36,7 +44,6 @@ body {
 }
 
 .menu__top__buttons {
-    display: flex;
     width: 100%;
     align-items: center;
 }
@@ -54,10 +61,16 @@ a {
 }
 
 .logo {
-    display: flex;
     justify-content: center;
     flex-direction: column-reverse;
-    padding: 10px 60px;
+    margin: 10px 40px;
+}
+.logo__image{
+
+}
+.barra{
+    background-color: black;
+height: 1px;
 }
 
 .menu__bot {
@@ -71,7 +84,7 @@ align-items: center;
 }
 
 .menu__bot__ul {
-    display: flex;
+
     justify-content: right;
     flex-direction: row;
 }
@@ -89,5 +102,6 @@ input[type=text] {
 }
 
 .search__bar {
-    padding: 20px 30px;
+    padding: 10px 10px;
+    height: 0%;
 }
