@@ -8,9 +8,11 @@ body {
     background-image: url("/img/background.png");
     margin: 0;
 }
-header{
+
+header {
     padding: 0px 14px;
     background-color: rgb(255, 255, 255);
+    z-index: 10;
 }
 
 .flex {
@@ -20,7 +22,6 @@ header{
 .lader {
 
     width: 100%;
-    font-size: 1.3em;
 
 }
 
@@ -44,7 +45,7 @@ header{
     flex-direction: row;
     padding: 0;
     margin: 0;
-
+    align-items: center;
 }
 
 .menu__top__buttons {
@@ -88,49 +89,57 @@ a {
 }
 
 .menu__bot__item:hover {
-    background-color:antiquewhite;
+    background-color: rgb(250, 234, 214, 0.5);
     border-radius: 20px;
-   
+
 }
+
 .menu__top__item:hover {
-    background-color:antiquewhite;
+    background-color: rgb(250, 234, 214, 0.5);
     border-radius: 20px;
 }
+
 .menu__extend__item:hover {
-    background-color:antiquewhite;
+    background-color: rgb(250, 234, 214, 0.7);
     border-radius: 20px;
 }
 
 .menu__extend {
     display: none;
     position: absolute;
-    background-color: rgb(201, 201, 201);
-    padding: 20px 20px;
+    background-color: rgb(201, 201, 201, 0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 6px 10px;
     left: 0;
-    top: 67px;
+    top: 52px;
+    z-index: 10;
 }
-.menu__extend__item{
-  padding: 10px 10px;
-  font-size: 0.8em;
+
+.menu__extend__item {
+    padding: 10px 10px;
+    font-size: 0.9em;
 }
 
 .menu__bot__item:hover>.menu__extend {
     display: block;
-    
+
 }
 
 .menu__bot__item button {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Saira', sans-serif;
     background-color: transparent;
     border: none;
 }
+
 .menu__bot__item a {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Saira', sans-serif;
     background-color: transparent;
     border: none;
 }
+
 .menu__top__item a {
     font-size: 0.9em;
     font-family: 'Saira', sans-serif;
@@ -138,10 +147,11 @@ a {
     border: none;
     align-items: center;
 }
+
 .menu__top__item button {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Saira', sans-serif;
-    background-color: antiquewhite;
+    background-color: rgb(250, 234, 214, 0.5);
     border-radius: 30%;
     border: none;
     padding: 0px 10px;
@@ -151,16 +161,17 @@ a {
 
     justify-content: right;
     flex-direction: row;
+    align-items: center;
 }
 
 input[type=text] {
-  height: 100%;
+    height: 100%;
     background-image: url(/img/search.png);
     border: none;
     background-color: rgb(207, 151, 66, 0.22);
     background-repeat: no-repeat;
     background-position: right;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Saira', sans-serif;
 
     padding: 20PX;
@@ -171,4 +182,43 @@ input[type=text] {
     padding: 0px 10px;
     height: 50%;
 
+}
+
+/* --------------------------------------------------------------------- */
+.banner {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.img__banner {
+    z-index: 1;
+    object-fit: fill;
+    height: 700px;
+
+}
+
+
+.texto {
+    position: absolute;
+    z-index: 2;
+    bottom: 70px;
+    left: 120px;
+
+
+}
+
+.titulo__banner {
+    font-size: 5em;
+    font-family: 'Roboto', sans-serif;
+    color: #799936;
+    margin-bottom: 2%;
+}
+
+.subtexto__banner {
+
+    font-family: 'Saira', sans-serif;
+    color: #4D5739;
+    font-size: 2em;
 }
