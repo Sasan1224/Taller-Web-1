@@ -1,22 +1,26 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
 body {
     background-image: url("/img/background.png");
     margin: 0;
 }
+header{
+    padding: 0px 14px;
+    background-color: rgb(255, 255, 255);
+}
 
-.flex{
+.flex {
     display: flex;
 }
 
 .lader {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    font-family: 'Saira', sans-serif;
 
+    width: 100%;
+    font-size: 1.3em;
 
 }
 
@@ -29,7 +33,7 @@ body {
 }
 
 .menu__top {
-
+    align-items: center;
     justify-content: space-evenly;
 
 }
@@ -63,14 +67,12 @@ a {
 .logo {
     justify-content: center;
     flex-direction: column-reverse;
-    margin: 10px 40px;
+    margin: 10px 35px;
 }
-.logo__image{
 
-}
-.barra{
+.barra {
     background-color: black;
-height: 1px;
+    height: 1px;
 }
 
 .menu__bot {
@@ -79,8 +81,70 @@ height: 1px;
 }
 
 .menu__bot__item {
-align-items: center;
-    padding: 20px;
+    padding: 12px 20px;
+    position: relative;
+    height: 100%;
+
+}
+
+.menu__bot__item:hover {
+    background-color:antiquewhite;
+    border-radius: 20px;
+   
+}
+.menu__top__item:hover {
+    background-color:antiquewhite;
+    border-radius: 20px;
+}
+.menu__extend__item:hover {
+    background-color:antiquewhite;
+    border-radius: 20px;
+}
+
+.menu__extend {
+    display: none;
+    position: absolute;
+    background-color: rgb(201, 201, 201);
+    padding: 20px 20px;
+    left: 0;
+    top: 67px;
+}
+.menu__extend__item{
+  padding: 10px 10px;
+  font-size: 0.8em;
+}
+
+.menu__bot__item:hover>.menu__extend {
+    display: block;
+    
+}
+
+.menu__bot__item button {
+    font-size: 1.3em;
+    font-family: 'Saira', sans-serif;
+    background-color: transparent;
+    border: none;
+}
+.menu__bot__item a {
+    font-size: 1.3em;
+    font-family: 'Saira', sans-serif;
+    background-color: transparent;
+    border: none;
+}
+.menu__top__item a {
+    font-size: 0.9em;
+    font-family: 'Saira', sans-serif;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+}
+.menu__top__item button {
+    font-size: 1.3em;
+    font-family: 'Saira', sans-serif;
+    background-color: antiquewhite;
+    border-radius: 30%;
+    border: none;
+    padding: 0px 10px;
 }
 
 .menu__bot__ul {
@@ -90,18 +154,21 @@ align-items: center;
 }
 
 input[type=text] {
-    size: 100%;
+  height: 100%;
     background-image: url(/img/search.png);
     border: none;
     background-color: rgb(207, 151, 66, 0.22);
     background-repeat: no-repeat;
     background-position: right;
-    
+    font-size: 1.3em;
+    font-family: 'Saira', sans-serif;
+
     padding: 20PX;
     border-radius: 40px;
 }
 
 .search__bar {
-    padding: 10px 10px;
-    height: 0%;
+    padding: 0px 10px;
+    height: 50%;
+
 }
