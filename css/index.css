@@ -196,7 +196,6 @@ input[type=text] {
     z-index: 1;
     object-fit: fill;
     height: 700px;
-
 }
 
 
@@ -221,4 +220,16 @@ input[type=text] {
     font-family: 'Saira', sans-serif;
     color: #4D5739;
     font-size: 2em;
+}
+
+.features{
+    width: 100%;
+    flex-direction: row;
+}
+
+.img__feat {
+    z-index: 1;
+    object-fit: fill;
+    height: 700px;
+    width: 30%;
 }
