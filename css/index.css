@@ -24,6 +24,12 @@ header {
     width: 100%;
 
 }
+.menuR{
+    display: none;
+    justify-content: right;
+    padding: 30px;
+    width: 100%; 
+}
 
 .menu {
 
