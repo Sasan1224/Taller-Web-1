@@ -400,27 +400,70 @@ input[type=email] {
     font-family: 'Saira', sans-serif;
 }
 
-.title__product{
-   background-color: rgb(121, 153, 54, 0.5);
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   padding: 40px;
+.title__product {
+    background-color: rgb(121, 153, 54, 0.5);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
 }
 
 .title__product__text {
     padding: 0;
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
-.product{
-    background-color: rgba(54, 133, 34, 0.5);
-    width: 100%;
-flex-wrap: wrap;
-display: flex;
-height: 300px;
+
+.product {
+    background-color: rgba(17, 44, 10, 0.2);
+    width: 60%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 390px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 30px;
 
 }
-.popular_item{
-    margin: 40px 0;
+
+.popular_item {
+    margin: 20px 0;
     background-color: rgb(7, 22, 7, 0.5);
-   
+    width: 320px;
+    border-radius: 20px;
+color: rgb(255, 255, 255);
+font-size: 0.9em;
+font-family: 'Saira', sans-serif;
+}
+h3{
+    padding: 5% 0;
+}
+.certificated{
+    width: 100%;
+    background-color: rgb(255, 239, 217, 0.4);
+    flex-direction: column;
+
+}
+.cert{
+    padding: 30px;
+    justify-content: center;
+    font-size: 1em;
+    font-family: 'Saira', sans-serif;
+    text-align: center;
+}
+.certificated__logos{
+    justify-content: center;
+}
+.cert__img{
+    padding: 10px 20px;
+}
+footer{
+    background-color: #3b3b3b;
+    color: #777777;
+padding: 60px 0;
+}
+.fot__text{
+    padding: 6px;
+    text-align: center;
 }
