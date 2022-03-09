@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("/img/background.png");
+    background-image: url("../img/background.png");
     margin: 0;
 }
 
@@ -171,7 +171,7 @@ a {
 
 input[type=text] {
     height: 30px;
-    background-image: url(/img/search.png);
+    background-image: url(../img/search.png);
     border: none;
     background-color: rgb(207, 151, 66, 0.22);
     background-repeat: no-repeat;
