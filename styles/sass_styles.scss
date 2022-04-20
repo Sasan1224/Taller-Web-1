@@ -6,6 +6,8 @@ $main3-font: 'Sarpanch',
 sans-serif;
 $colorHoverButon: #faead680;
 $colorFormInner: #cf974238;
+$menuextend:#c9c9c94d;
+$white: #ffffff;
 
 * {
     box-sizing: border-box;
@@ -20,7 +22,7 @@ body {
 
 header {
     padding: 0px 14px;
-    background-color: rgb(255, 255, 255);
+    background-color: $white;
     z-index: 10;
 }
 
@@ -34,7 +36,7 @@ a {
 
 h2 {
     padding-top: 30%;
-    font-family: 'Roboto', sans-serif;
+    font-family: $main2-font;
 }
 
 .input {
@@ -90,5 +92,16 @@ h2 {
         &__item {
             padding: 0 20px;
         }
+    }
+    &__extend{
+        display: none;
+        position: absolute;
+        background-color:$menuextend;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 6px 10px;
+        left: 0;
+        top: 57px;
+        z-index: 10;
     }
 }
