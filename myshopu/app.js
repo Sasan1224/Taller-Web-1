@@ -24,10 +24,3 @@ createuserbutom.addEventListener("submit", e =>{
   console.log(app)
   console.log("yaqss")
 })
-
-async function getCities(db) {
-  const citiesCol = collection(db, 'cities');
-  const citySnapshot = await getDocs(citiesCol);
-  const cityList = citySnapshot.docs.map(doc => doc.data());
-  return cityList;
-}
