@@ -20,15 +20,14 @@ header {
 }
 
 .lader {
-
     width: 100%;
-
 }
-.menuR{
+
+.menuR {
     display: none;
     justify-content: right;
     padding: 30px;
-    width: 100%; 
+    width: 100%;
 }
 
 .menu {
@@ -432,43 +431,50 @@ input[type=email] {
 
 }
 
-.popular_item {
+.popular__item {
     margin: 20px 0;
     background-color: rgb(7, 22, 7, 0.5);
     width: 320px;
     border-radius: 20px;
-color: rgb(255, 255, 255);
-font-size: 0.9em;
-font-family: 'Saira', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 0.9em;
+    font-family: 'Saira', sans-serif;
 }
-h3{
+
+h3 {
     padding: 5% 0;
 }
-.certificated{
+
+.certificated {
     width: 100%;
     background-color: rgb(255, 239, 217, 0.4);
     flex-direction: column;
 
 }
-.cert{
+
+.cert {
     padding: 30px;
     justify-content: center;
     font-size: 1em;
     font-family: 'Saira', sans-serif;
     text-align: center;
 }
-.certificated__logos{
+
+.certificated__logos {
     justify-content: center;
 }
-.cert__img{
+
+.cert__img {
     padding: 10px 20px;
 }
-footer{
+
+footer {
     background-color: #3b3b3b;
     color: #777777;
-padding: 60px 0;
+    padding: 60px 0;
 }
-.fot__text{
+
+.fot__text {
     padding: 6px;
     text-align: center;
 }
