@@ -48,6 +48,9 @@
     .menu {
         display: none;
     }
+    .barra{
+        display: none;
+    }
 
     .lader {
         justify-content: space-between;

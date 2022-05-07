@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/sass_loguin.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="all flex">
+        <div class="logo flex">
+            <img src="../img/logo.png" alt="logo">
+        </div>
+        <div class="content flex">
+            <div class="regis flex">
+                <form id="CreateUserForm">
+                    <label for="name">Nombre</label>
+                    <input type="text" placeholder="Nombre" name="name" class="CUF">
+                    <label for="lastName">Apellido</label>
+                    <input type="text" placeholder="Apellido" name="lastName" class="CUF">
+                    <label for="Cel">Numero Celular</label>
+                    <input type="number" placeholder="Celular" name="Cel" class="CUF">
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" placeholder="Correo Electronico" name="email" class="CUF">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Contraseña" name="password" class="CUF">
+                    <input type="submit" value="Crear Usuario" class="CUFB">
+                </form>
+            </div>
+            <div class="barra"></div>
+            <div class="loguin flex">
+                <form id="loguinForm">
+                    <label for="email">Correo Electronico</label>
+                    <input type="email" placeholder="Correo Electronico" name="email" class="LF">
+                    <label for="password">Contraseña</label>
+                    <input type="password" placeholder="Contraseña" name="password" class="LF">
+                    <input type="submit" value="Loguin" class="LFB">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
