@@ -235,6 +235,7 @@ input {
         width: 100%;
         height: 100%;
         flex-direction: column;
+        font-size: 1.5em;
 
         &__title {
             height: 100px;
@@ -286,11 +287,13 @@ input {
                         flex-direction: column;
                         margin: 30px;
                         width: 100%;
+                        font-size: 1.7em;
 
                         &__cant {
                             flex-direction: row;
                             justify-content: center;
                             align-items: center;
+                            font-family: $main-font;
                         }
 
                         &__item {
@@ -319,4 +322,8 @@ input {
             }
         }
     }
+}
+h1{
+    font-size: 2.7em;
+    font-family: $main3-font;
 }

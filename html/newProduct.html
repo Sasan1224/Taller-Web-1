@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/newProduct.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <form id="forma" class="flex">
+        <div class="box flex">
+
+            <label for="name" class="item1 flex">Nombre del producto</label>
+            <input type="text" id="name" class="item">
+
+            <label for="periodic_table_type" class="item1">Grupos periodicos</label>
+            <select name="periodic_table_type" id="periodic_table_type" class="items LFB">
+                <option value="metales alcalinos">metales alcalinos</option>
+                <option value="metales alcalinotérreos">metales alcalinotérreos</option>
+                <option value="tierras raras y actinidos">tierras raras y actinidos</option>
+                <option value="familia del titanio">familia del titanio</option>
+                <option value="familia del vanadio">familia del vanadio</option>
+                <option value="familia del cromo">familia del cromo</option>
+                <option value="familia del manganeso">familia del manganeso</option>
+                <option value="familia del hierro">familia del hierro</option>
+                <option value="familia del cobalto">familia del cobalto</option>
+                <option value="familia del níquel">familia del níquel</option>
+                <option value="familia del cobre">familia del cobre</option>
+                <option value="familia del zinc">amilia del zinc</option>
+                <option value="térreos">térreos</option>
+                <option value="carbonoideos">carbonoideos</option>
+                <option value="nitrogenoideos">nitrogenoideos</option>
+                <option value="calcógenos o anfígenos">calcógenos o anfígenos</option>
+                <option value="halógenos">halógenos</option>
+                <option value="gases nobles">gases nobles</option>
+            </select>
+
+            <label for="price" class="item1">precio del producto</label>
+            <input type="number" id="price" class="item">
+
+            <label for="unit_presenation" class="item1">Medida del producto</label>
+            <select name="unit_presenation" id="unit_presenation" class="items LFB">
+                <option value="Kg">kg</option>
+                <option value="L">L</option>
+                <option value="Mol">Mol</option>
+            </select>
+
+            <label for="license_needed" class="item1">Se necesita licencia?</label>
+            <select name="license_needed" id="license_needed" class="items LFB">
+                <option value="true">si</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="disponibility" class="item1">Hay disponibilidad?</label>
+            <select name="disponibility" id="disponibility" class="items LFB">
+                <option value="true">si</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="cuantity" class="item1">Unidades disponibles</label>
+            <input type="number" id="cuantity" class="item">
+
+            <label for="cdu" class="item1">cantidad disponible por unidad</label>
+            <input type="number" id="cdu" class="item">
+
+            <label for="imgs" class="item1">Imagen correspondiente</label>
+            <input type="file" id="imgs" class="item">
+
+            <label for="dengerous" class="item1">Es peligroso?</label>
+            <select name="dengerous" id="dengerous" class="items LFB">
+                <option value="true">si</option>
+                <option value="false">No</option>
+            </select>
+            
+            <label for="description" class="item1">descripcion</label>
+            <input type="textarea" id="description" class="item">
+
+            <button type="submit" class="LFB flex">enviar</button>
+    </form>
+    </div>
 </body>
+<script src="/js/utilies/createProduct.js" type="module"></script>
+
 </html>

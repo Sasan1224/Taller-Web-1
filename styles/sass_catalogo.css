@@ -288,13 +288,112 @@ select {
   padding-right: 20px;
 }
 
-.main {
-  padding: 30px 200px;
-  height: 100%;
+.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 20px 100px;
 }
 
-.main__fondo {
-  width: 100%;
+.produck {
+  width: 200px;
+  display: block;
   background-color: #79993680;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  color: #07160780;
+}
+
+.produck__imag {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.produck__info {
+  padding: 10px;
+}
+
+.produck__name {
+  margin: 5px 0;
+  padding-top: 10%;
+}
+
+.produck__price {
+  margin: 5px 0;
+}
+
+.produck__cart {
+  margin-top: 20px;
+  border: none;
+  background-color: #cf974238;
+  font-family: "Saria", sans-serif;
+  font-size: 0.9em;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 10PX;
+  width: 70%;
+  color: #000000b3;
+}
+
+.produck__cart:hover {
+  background-color: #b47a3727;
+  border-radius: 20px;
+}
+
+#imge {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #ffffff;
+}
+
+.loader {
+  border: 16px solid #ffffff;
+  border-top: 16px solid #79993680;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=sass_catalogo.css.map */

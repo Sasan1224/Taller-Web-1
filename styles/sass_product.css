@@ -258,6 +258,7 @@ input[type=email] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 1.5em;
 }
 
 .product__main__title {
@@ -335,6 +336,7 @@ input[type=email] {
           flex-direction: column;
   margin: 30px;
   width: 100%;
+  font-size: 1.7em;
 }
 
 .product__main__content__descrip__content__2__cant {
@@ -348,6 +350,7 @@ input[type=email] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Saria", sans-serif;
 }
 
 .product__main__content__descrip__content__2__item {
@@ -374,5 +377,10 @@ input[type=email] {
 .product__main__content__descrip__content__2__item__b:hover {
   background-color: #ffdcb180;
   border-radius: 10px;
+}
+
+h1 {
+  font-size: 2.7em;
+  font-family: "Sarpanch", sans-serif;
 }
 /*# sourceMappingURL=sass_product.css.map */

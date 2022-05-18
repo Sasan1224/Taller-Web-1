@@ -79,39 +79,43 @@
             <input type="text" class="filter__fondo__search" placeholder="Buscar">
             <div class="filter__fondo__filtrar flex">
                 <p class="filter__fondo__filtrar__texto">Filtrar Por</p>
-                <select name="filtro" class="filter__fondo__filtrar__filtro">
-                    <option>todo</option>
+                <select name="filtro" class="filter__fondo__filtrar__filtro" id="cat">
+                    <option value="">todo</option>
 
-                    <option>licencia</option>
+                    <option value="Kg">Kg</option>
 
-                    <option>peligroso</option>
+                    <option value="L">L</option>
 
-                    <option>no peligroso</option>
+                    <option value="Mol">Mol</option>
 
                 </select>
             </div>
             <div class="filter__fondo__ordenar flex">
                 <p class="filter__fondo__ordenar__texto">Ordenar Por</p>
-                <select name="oden" class="filter__fondo__ordenar__orden">
-                    <option>todo</option>
+                <select name="oden" class="filter__fondo__ordenar__orden" id="orden">
+                    <option value="">todo</option>
 
-                    <option>barato</option>
+                    <option value="asc">barato</option>
 
-                    <option>caro</option>
-
-                    <option>alfabetico</option>
+                    <option value="desc">caro</option>
 
                 </select>
             </div>
         </div>
     </section>
-    <section class="main flex">
-        <div class="main__fondo">
-            <div class="main__espacio">
-
+    <section class="products" id="products">
+        <!-- <a class="product" href="#">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_757658-MLA49753184518_042022-O.webp" alt="" class="product__image">
+            <div class="product__info">
+                <h2 class="product__name">Nombre</h2>
+                <h3 class="product__price">$50000</h3>
+                <button class="product__cart">Añadir al carrito</button>
             </div>
-        </div>
+        </a> -->
+
+        <div class="loader"></div>
+
     </section>
 </body>
-
+<script src="../js/utilies/shop.js" type="module"></script>
 </html>

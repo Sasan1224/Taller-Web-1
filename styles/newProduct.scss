@@ -1,0 +1,127 @@
+$main-font: 'Saria',
+sans-serif;
+$main2-font: 'Roboto',
+sans-serif;
+$main3-font: 'Sarpanch',
+sans-serif;
+$colorHoverButon: #faead680;
+$colorFormInner: #cf974238;
+$menuextend:#c9c9c94d;
+$white: #ffffff;
+$almostwithe: #f1f1f1;
+$grey: #777777;
+$grey2: #68835696;
+$yanose:#ffefd966;
+$almostblack: #3b3b3b;
+$green:#79993680;
+$caja:#ffdcb180;
+$blancotrasparentoso: #ffffff99;
+$negrotrasparentoso:#000000b3;
+$blackgreen:#112c0a33;
+$blackergreen:#07160780;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../img/background.png");
+    margin: 0;
+}
+
+.flex {
+    display: flex
+}
+
+.all {
+
+    margin: 60px 240px;
+    background-color: $grey2;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 30px 100px;
+}
+
+#forma {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+
+}
+.box{
+
+    background-color: $green;
+    margin: 70px 300px;
+    height: 100%;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.item {
+    margin-top: 30px;
+    border: none;
+    background-color: $colorFormInner;
+    font-family: $main-font;
+    font-size: 1.6em;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 10PX;
+    width: 350px;
+    color: $negrotrasparentoso;
+
+    &::placeholder {
+        color: #0000004d;
+    }
+
+    &:hover {
+        background-color: #b47a3727;
+        border-radius: 20px;
+    }
+}
+.item1 {
+    margin-top: 30px;
+    align-items: center;
+    border: none;
+    font-family: $main-font;
+    font-size: 1.6em;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 10PX;
+    width: 350px;
+    color: $negrotrasparentoso;
+}
+label{
+    font-size: 1.5em;
+    margin-bottom: 10PX;
+    font-family: $main2-font;
+}
+.LFB {
+    margin-top: 30px;
+    justify-content: center;
+      margin-bottom: 30px;
+      border: none;
+      background-color: $colorFormInner;
+      font-family: $main-font;
+      font-size: 1.6em;
+      border-radius: 40px;
+      background-repeat: no-repeat;
+      background-position: right;
+      padding: 10PX;
+      width: 250px;
+      color: $negrotrasparentoso;
+      &:hover {
+          background-color: #b47a3727;
+          border-radius: 20px;
+      }
+  }
