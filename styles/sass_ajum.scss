@@ -1,0 +1,226 @@
+$main-font: 'Saria',
+sans-serif;
+$main2-font: 'Roboto',
+sans-serif;
+$main3-font: 'Sarpanch',
+sans-serif;
+$colorHoverButon: #faead680;
+$colorFormInner: #cf974238;
+$menuextend:#c9c9c94d;
+$white: #ffffff;
+$almostwithe: #f1f1f1;
+$grey: #777777;
+$grey2: #505c3796;
+$yanose:#ffefd966;
+$almostblack: #3b3b3b;
+$green:#79993680;
+$caja:#ffdcb180;
+$caja2:#ffffff80;
+$blancotrasparentoso: #ffffff99;
+$negrotrasparentoso:#000000b3;
+$blackgreen:#112c0a33;
+$blackergreen:#07160780;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("../img/background.png");
+    margin: 0;
+}
+
+header {
+    padding: 0px 14px;
+    background-color: $white;
+    z-index: 10;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: $main2-font;
+}
+
+.flex {
+    display: flex
+}
+
+.lader {
+    width: 100%
+}
+
+.logo {
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin: 0px 35px;
+}
+
+.menuR {
+    display: none;
+    justify-content: right;
+    padding: 30px;
+    width: 100%;
+}
+
+.menu {
+    justify-content: right;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &__top {
+        align-items: center;
+        justify-content: space-evenly;
+
+        &__ul {
+            height: 50px;
+            width: 100%;
+            justify-content: right;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        &__buttons {
+            width: 100%;
+            align-items: center;
+        }
+
+        &__item {
+            padding: 0 20px;
+
+            &:hover {
+                background-color: #faead680;
+                border-radius: 20px;
+            }
+
+            &__a {
+                font-size: 0.9em;
+                font-family: $main-font;
+                background-color: transparent;
+                border: none;
+                align-items: center;
+            }
+
+            &__b {
+                font-size: 1.1em;
+                font-family: $main-font;
+                background-color: $colorHoverButon;
+                border-radius: 30%;
+                border: none;
+                padding: 0px 10px;
+            }
+        }
+    }
+
+    &__extend {
+        display: none;
+        position: absolute;
+        background-color: $menuextend;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        padding: 6px 10px;
+        left: 0;
+        top: 47px;
+        z-index: 10;
+
+        &__item {
+            padding: 10px 10px;
+            font-size: 0.9em;
+
+            &:hover {
+                background-color: $colorHoverButon;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    &__bot {
+        width: 100%;
+
+        &__item {
+            padding: 12px 20px;
+            position: relative;
+
+            &:hover {
+                background-color: $colorHoverButon;
+                border-radius: 20px;
+            }
+
+            &__a {
+                font-size: 1.1em;
+                font-family: $main-font;
+                background-color: transparent;
+                border: none;
+            }
+
+            &__b {
+                font-size: 1.1em;
+                font-family: 'Saira', sans-serif;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        &__ul {
+            justify-content: right;
+            flex-direction: row;
+            align-items: center;
+
+        }
+    }
+}
+
+.menu__bot__item:hover>.menu__extend {
+    display: block;
+}
+
+input {
+    height: 30px;
+    border: none;
+    background-color: $colorFormInner;
+    font-family: $main-font;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 1.1em;
+
+    &[type=text] {
+        padding: 20PX;
+        border-radius: 40px;
+    }
+
+    &[type=number] {
+        padding: 10PX;
+        border-radius: 40px;
+        width: 100px;
+    }
+
+    &[type=email] {
+        padding: 10PX;
+        border-radius: 40px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.search {
+    &__bar {
+        padding: 10px 10px;
+        height: 100%;
+    }
+}
+
+.barra {
+    background-color: black;
+    height: 1px;
+}
