@@ -267,11 +267,90 @@ select {
     }
 }
 
-.main{
-    padding: 30px 200px;
-    height: 100%;
-    &__fondo{
-        width: 100%;
-        background-color: $green;
-    }
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px 100px
 }
+
+.produck {
+    width: 200px;
+    display: block;
+    background-color: $green;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-family: $main2-font;
+    color: $blackergreen;
+    
+
+    &__imag {
+        width: 100%;
+        height: 250px;
+        object-fit:fill;
+    }
+
+    &__info {
+        padding: 10px;
+    }
+
+
+    &__name {
+        margin: 5px 0;
+        padding-top: 10%;
+    }
+
+    &__price {
+        margin: 5px 0;
+    }
+    &__cart{
+        margin-top: 20px;
+
+    
+              border: none;
+              background-color: $colorFormInner;
+              font-family: $main-font;
+              font-size: 0.9em;
+              border-radius: 40px;
+              background-repeat: no-repeat;
+              background-position: right;
+              padding: 10PX;
+              width: 70%;
+              color: $negrotrasparentoso;
+              &:hover {
+                  background-color: #b47a3727;
+                  border-radius: 20px;
+              }
+          }
+    
+}
+#imge{
+    width: 100%;
+    height: 250px;
+    object-fit:contain;
+    background-color: $white;
+}
+
+.loader {
+    border: 16px solid $white;
+    border-top: 16px solid $green;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
