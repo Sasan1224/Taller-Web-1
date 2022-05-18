@@ -23,6 +23,7 @@ return user
                 alert("algo esta mal revisa otra vez")
     
         }
+
     }
 
     async function createUserInfo(db,userID,userInfo){

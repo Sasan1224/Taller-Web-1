@@ -16,6 +16,7 @@ function currencyFormat(price) {
     }).format(price);
 }
 
+
 export {
     addProductToCart,
     getMyLocalCart,

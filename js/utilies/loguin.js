@@ -37,17 +37,9 @@ createUserB.addEventListener("submit", async e => {
 
 loginUserB.addEventListener("submit", e => {
     e.preventDefault();
-    const email = loguinForm.email.value
-    const pasword = loguinForm.password.value
 
-    login(auth, email, pasword);
-    if (User.admin) {
-        console.log("log town")
-        window.location.href = "./html/index.html"
-    } else {
-        location.href = "./html/index.html"
-        console.log("marine hq")
-    }
+    const email = loginUserB.email.value;
+    const password = loginUserB.password.value;
 
-
-})
+    login(auth, email, password);
+});

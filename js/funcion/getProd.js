@@ -8,24 +8,21 @@
     auth
 } from "../funcion/app";
 
- async function getProducts(db) {
-     const collectionRef = collection(db, "product")
-     try {
-         const {
-             docs
-         } = await getDocs(collectionRef)
-         const product = docs.map((doc) => {
-             return {
-                 ...doc.data(),
-                 id: doc.id
-             }
-         });
-         return product
-
-     } catch (e) {
-         console.log(e)
-     }
- }
+async function getProducts(db) {
+    const collectionRef = collection(db, "product");
+    try {
+        const { docs } =  await getDocs(collectionRef);
+        const products = docs.map((doc) => {
+            return {
+                ...doc.data(),
+                id: doc.id,
+            };
+        });
+        return products;
+    } catch(e) {
+        console.log(e);
+    }
+}
 
  async function tomaProduct(id) {
      try {

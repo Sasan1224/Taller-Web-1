@@ -13,6 +13,10 @@ import {
   onAuthStateChanged
 
 } from "firebase/auth";
+import {
+  getMyLocalCart,
+  addProductToCart,currencyFormat
+} from "../funcion/index";
 
 
 
@@ -31,7 +35,7 @@ async function loadProd() {
   productSection.innerHTML = ""
   firebaseProducts.forEach(product => {
     renderProduct(product)
-    console.log(product.id)
+ 
   })
   producktos = firebaseProducts;
 }
@@ -41,6 +45,7 @@ function renderProduct(item) {
   product.className = "produck";
 
   product.setAttribute("href", `./producto.html?id=${item.id}`);
+  console.log(item.id)
 
   const coverImage = item.images ? item.images[0] : "https://cdn1.iconfinder.com/data/icons/business-company-1/500/image-512.png";
 
@@ -55,7 +60,7 @@ function renderProduct(item) {
   <div class="produck__info">
       <p class="produck__category">${item.periodic_table_type}</p> 
       <h2 class="produck__name">${item.name}</h2>
-      <h3 class="produck__price">${item.price}</h3>
+      <h3 class="produck__price">${currencyFormat( item.price)}</h3>
       ${productButtonCart}
   </div>
   `;

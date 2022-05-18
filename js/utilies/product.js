@@ -2,15 +2,11 @@ import {
     db,
     auth
 } from "../funcion/app";
-import {
-    doc,
-    getDoc
-} from "firebase/firestore";
+
 import {
     onAuthStateChanged
 } from "firebase/auth";
 import {
-    getProduct,
     tomaProduct
 } from "../funcion/getProd";
 import {
@@ -19,13 +15,15 @@ import {
 } from "../utilies/cart";
 import {
     getMyLocalCart,
-    addProductToCart
+    addProductToCart,currencyFormat
 } from "../funcion/index";
-import {
-    async
-} from "@firebase/util";
+
 
 const secction = document.getElementById("product")
+const userLogged = undefined;
+let cart = [];
+
+loadproduct("id")
 
 function getParam(param) {
     const url = window.location.search;
@@ -62,7 +60,11 @@ function renderProduct(prod) {
     if (prod.dengerous === "false") {
         Peligro = "No"
     }
+    const isProductAddedToCart = cart.some((productCart) => productCart.id === prod.id);
 
+    const productButtonCart = isProductAddedToCart ?
+    '<  <button class="product__main__content__descrip__content__2__item__b flex" disable>agregar al carro</button>' :
+    '  <button class="product__main__content__descrip__content__2__item__b flex">agregar al carro</button>';
 
     secction.innerHTML = `
 <div class="product__main flex">
@@ -82,9 +84,10 @@ function renderProduct(prod) {
             </div>
             <div class="product__main__content__descrip__content__2 flex">
                 <p class="product__main__content__descrip__content__2__item flex"><h2>Precio /${prod.unit_presenation}</h2></p>
-                <p class="product__main__content__descrip__content__2__item flex">${prod.price}</p>
-                <button class="product__main__content__descrip__content__2__item__b flex">agregar al carro</button>
-                <button class="product__main__content__descrip__content__2__item__b flex">comprar</button>
+                <p class="product__main__content__descrip__content__2__item flex">${currencyFormat( prod.price)}</p>
+              
+                ${productButtonCart}
+                
                 <div class="product__main__content__descrip__content__2__cant flex">
                     <p >CANTIDAD</p>
                     <input type="number" name="" class="7">
@@ -96,23 +99,35 @@ function renderProduct(prod) {
 </div>
 </div>
 `
-    const productCartButton = document.querySelector(".pproduct__main__content__descrip__content__2__item__buct__cart");
-    productCartButton.addEventListener("click", e => {
-        console.log("anilllos")
-        /*       
-        cart.push(product);
-        
-      if (userLogged) {
 
-        addProductToCart(cart);
+    const PCB = document.querySelector(".product__main__content__descrip__content__2__item__b");
+    PCB.addEventListener("click", async (e) => {
+        console.log("anilllos")
+        cart.push(prod)
+        addProductToCart(cart)
+
+        if (userLogged) {
             createFirebaseCart(db, userLogged.uid, cart);
-            productCartButton.setAttribute("disabled", true);
-            productCartButton.innerText = "Producto añadido";
-        }*/
+        }
+        PCB.setAttribute("disabled", true);
+        PCB.innerText = "Producto añadido";
+
     });
 
 }
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
 
+      userLogged = user;
+      console.log(user)
+      cart = await getFirebaseCart(db, userLogged.uid);
 
+      // ...
+    } else {
+        cart = getMyLocalCart();
 
-loadproduct("id")
+    }
+
+    loadproduct()
+
+  });
