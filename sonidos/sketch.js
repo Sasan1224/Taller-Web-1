@@ -2,8 +2,11 @@
 
 let butom;
 let cajon;
-let moved = false;
-let img
+let img;
+let movebox = false;
+
+
+
 
 function preload(){
   img = loadImage("../img/banner.png")
@@ -40,7 +43,7 @@ class box {
     this.diameter = 100;
     this.sound = 0;
     this.direc=0;
-
+   this.movebox = false
   }
 
   display() {
@@ -89,7 +92,7 @@ class ball {
     this.diameter = 50;
     this.sound = 0;
     this.direc=0;
-
+    this.moveball = false
   }
 
   display() {
@@ -134,7 +137,7 @@ class ball {
      this.movex()
       this.x = mouseX
       this.y = mouseY
-moved = true;
+      this.moveball = true;
     }
   }
 
@@ -147,7 +150,7 @@ function move(samba) {
     butom.moveX();
     samba.x = mouseX
     samba.y = mouseY
-    moved = true;
+    movebox = true;
   }
 }
 
@@ -161,13 +164,17 @@ function mouseDragged() {
 }
 
 function mouseReleased() {
-  if (moved){
+  if (movebox){
     butom.direc = 0;
- butom.moveX();
+ butom.moveX();}
 cajon.forEach(e =>{
+  if (e.moveball){
   e.direc = 0;
   e.movex();
-});
   }
-moved = false;
+});
+
+movebox = false;
+moveball = false;
+
 }
